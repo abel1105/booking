@@ -1,33 +1,29 @@
-import React, { useState } from 'react';
-import { DateRangePicker } from 'react-dates';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import './App.scss';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import Home from './routes/Home';
+import { getRooms } from './helpers/API';
+import { useDispatch } from 'redux-react-hook';
+import { setRoomsWithData } from './store/actions';
 
 function App() {
-  const [ startDate, setStartDate ] = useState(null);
-  const [ endDate, setEndDate ] = useState(null);
-  const [ focusInput, setFocusInput ] = useState(null);
+  const dispatch = useDispatch();
+  const [isLoading, setIsLoading] = useState(false);
 
-  const onDatesChange = ({ startDate, endDate }) => {
-    setStartDate(startDate);
-    setEndDate(endDate);
-  };
-
-  const onFocusChange = input => {
-    setFocusInput(input)
-  };
+  useEffect(() => {
+    getRooms().then(r => {
+      dispatch(setRoomsWithData(r.items));
+      setIsLoading(true);
+    });
+  }, [dispatch]);
 
   return (
     <div className="App">
-      <DateRangePicker
-        startDate={startDate}
-        startDateId="start"
-        endDate={endDate}
-        endDateId="end"
-        onDatesChange={onDatesChange}
-        focusedInput={focusInput}
-        onFocusChange={onFocusChange}
-      />
+      {isLoading && (
+        <Router>
+          <Route path="/" exact component={Home} />
+        </Router>
+      )}
     </div>
   );
 }

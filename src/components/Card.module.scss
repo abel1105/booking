@@ -1,0 +1,68 @@
+.root {
+  width: 300px;
+  height: 350px;
+  position: relative;
+  box-shadow: 2px 2px 9px 0 rgba(0, 0, 0, 0.18);
+
+  &:hover {
+    .info {
+      height: 132px;
+    }
+
+    .price {
+      display: flex;
+    }
+  }
+}
+
+.img {
+  width: 300px;
+  height: 280px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #f7f7f7;
+  height: 70px;
+  transition: all 0.5s;
+  padding: 23px 30px;
+  overflow: hidden;
+}
+
+.price {
+  margin-top: 43px;
+  display: none;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.name {
+  font-size: 14px;
+  color: #000000;
+}
+
+.normal_price {
+  font-size: 21px;
+  color: #000000;
+  letter-spacing: 2.19px;
+  line-height: 31px;
+}
+
+.holiday_price {
+  font-size: 12px;
+  color: #6d7278;
+  letter-spacing: 1.25px;
+  line-height: 18px;
+}
+
+.tag {
+  font-size: 12px;
+  letter-spacing: 1.25px;
+  line-height: 18px;
+  padding-left: 4px;
+}

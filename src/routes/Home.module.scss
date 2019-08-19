@@ -1,0 +1,76 @@
+.swiper {
+  position: absolute;
+  top: 0;
+  height: 70vh;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg {
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.main {
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  margin-top: 155px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin: 0 4px;
+}
+
+.icon_small {
+  width: 20px;
+  height: 20px;
+}
+
+.info {
+  display: flex;
+  margin: 50px 0 97px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+  border-right: 1px solid #fff;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding-left: 25px;
+}
+
+.contact_item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+
+  span {
+    margin-left: 20px;
+  }
+}
+
+.card_container {
+  width: 100vw;
+  max-width: 946px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-column-gap: 22px;
+  grid-row-gap: 58px;
+}
