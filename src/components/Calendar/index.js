@@ -5,7 +5,7 @@ import { useMappedState } from 'redux-react-hook';
 import moment from 'moment';
 
 function Calendar() {
-  const [date, setDate] = useState(null);
+  const [date] = useState(null);
   const booking = useMappedState(state => state.booking);
 
   const isBooked = day => {

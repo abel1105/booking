@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useMappedState } from 'redux-react-hook';
 import s from './Home.module.scss';
 import Slider from 'react-slick';
@@ -38,23 +38,23 @@ function Home() {
         </Slider>
       </div>
       <div className={s.main}>
-        <img className={s.logo} src={logo} />
+        <img className={s.logo} src={logo} alt="" />
         <div className={s.info}>
           <div className={s.social}>
-            <img className={s.icon} src={fb} />
-            <img className={s.icon} src={ig} />
+            <img className={s.icon} src={fb} alt="" />
+            <img className={s.icon} src={ig} alt="" />
           </div>
           <div className={s.contact}>
             <div className={s.contact_item}>
-              <img className={s.icon_small} src={phone} />
+              <img className={s.icon_small} src={phone} alt="" />
               <span>02-17264937</span>
             </div>
             <div className={s.contact_item}>
-              <img className={s.icon_small} src={envelope} />
+              <img className={s.icon_small} src={envelope} alt="" />
               <span>whitespace@whitespace.com.tw</span>
             </div>
             <div className={s.contact_item}>
-              <img className={s.icon_small} src={home} />
+              <img className={s.icon_small} src={home} alt="" />
               <span>台北市羅斯福路十段30號</span>
             </div>
           </div>

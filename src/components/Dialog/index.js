@@ -103,7 +103,7 @@ function Dialog({ open, onClose }) {
           <React.Fragment>
             <span className={s.title}>預約成功</span>
             <div className={s.form} style={{ textAlign: 'center' }}>
-              <img className={s.success} src={success} />
+              <img className={s.success} src={success} alt="success" />
             </div>
             <div className={s.action_one}>
               <button className={s.button} onClick={onClose}>

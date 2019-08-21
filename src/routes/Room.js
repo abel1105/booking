@@ -28,9 +28,8 @@ function Room(props) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const { room, booking } = useMappedState(state => ({
-    room: state.room,
-    booking: state.booking
+  const { room } = useMappedState(state => ({
+    room: state.room
   }));
 
   const dispatch = useDispatch();
@@ -59,7 +58,7 @@ function Room(props) {
       {isLoaded && (
         <div className={s.container}>
           <Link to="/">
-            <img className={s.logo} src={logo} />
+            <img className={s.logo} src={logo} alt="logo" />
           </Link>
           <Gallery imageUrl={room.imageUrl} />
           <div className={s.content}>
@@ -94,25 +93,25 @@ function Room(props) {
               </div>
               <div className={s.grid}>
                 <span className={cx({ [s.active]: room.amenities['Wi-Fi'] })}>
-                  <img src={wifi} />
+                  <img src={wifi} alt="wifi" />
                   Wi-Fi
                 </span>
                 <span
                   className={cx({ [s.active]: room.amenities['Television'] })}
                 >
-                  <img src={phone} />
+                  <img src={phone} alt="phone" />
                   電話
                 </span>
                 <span
                   className={cx({ [s.active]: room.amenities['Great-View'] })}
                 >
-                  <img src={mountain} />
+                  <img src={mountain} alt="mountain" />
                   漂亮的視野
                 </span>
                 <span
                   className={cx({ [s.active]: room.amenities['Breakfast'] })}
                 >
-                  <img src={breakfast} />
+                  <img src={breakfast} alt="breakfast" />
                   早餐
                 </span>
                 <span
@@ -120,25 +119,25 @@ function Room(props) {
                     [s.active]: room.amenities['Air-Conditioner']
                   })}
                 >
-                  <img src={ac} />
+                  <img src={ac} alt="ac" />
                   空調
                 </span>
                 <span
                   className={cx({ [s.active]: room.amenities['Smoke-Free'] })}
                 >
-                  <img src={smoke} />
+                  <img src={smoke} alt="smoke" />
                   禁止吸煙
                 </span>
                 <span
                   className={cx({ [s.active]: room.amenities['Mini-Bar'] })}
                 >
-                  <img src={bar} />
+                  <img src={bar} alt="bar" />
                   Mini Bar
                 </span>
                 <span
                   className={cx({ [s.active]: room.amenities['Refrigerator'] })}
                 >
-                  <img src={fridge} />
+                  <img src={fridge} alt="fridge" />
                   冰箱
                 </span>
                 <span
@@ -146,23 +145,23 @@ function Room(props) {
                     [s.active]: room.amenities['Child-Friendly']
                   })}
                 >
-                  <img src={baby} />
+                  <img src={baby} alt="baby" />
                   適合兒童
                 </span>
                 <span
                   className={cx({ [s.active]: room.amenities['Room-Service'] })}
                 >
-                  <img src={service} />
+                  <img src={service} alt="service" />
                   Room Service
                 </span>
                 <span className={cx({ [s.active]: room.amenities['Sofa'] })}>
-                  <img src={sofa} />
+                  <img src={sofa} alt="sofa" />
                   沙發
                 </span>
                 <span
                   className={cx({ [s.active]: room.amenities['Pet-Friendly'] })}
                 >
-                  <img src={dog} />
+                  <img src={dog} alt="dog" />
                   寵物攜帶
                 </span>
               </div>
