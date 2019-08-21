@@ -1,7 +1,9 @@
-import { SET_ROOMS } from './actions';
+import { SET_BOOKING, SET_ROOM, SET_ROOMS } from './actions';
 
 const initialState = {
-  rooms: []
+  rooms: [],
+  room: {},
+  booking: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -10,6 +12,18 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         rooms: action.payload.rooms
+      };
+    }
+    case SET_ROOM: {
+      return {
+        ...state,
+        room: action.payload.room
+      };
+    }
+    case SET_BOOKING: {
+      return {
+        ...state,
+        booking: action.payload.booking
       };
     }
     default: {

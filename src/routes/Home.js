@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useMappedState } from 'redux-react-hook';
 import s from './Home.module.scss';
-import Card from '../components/Card';
 import Slider from 'react-slick';
 import logo from '../svg/logo_white.svg';
 import fb from '../svg/facebook-square-brands.svg';
@@ -9,6 +8,7 @@ import ig from '../svg/instagram-brands.svg';
 import phone from '../svg/phone-alt-solid.svg';
 import envelope from '../svg/envelope-solid.svg';
 import home from '../svg/home-solid.svg';
+import Card from '../components/Card';
 
 function Home() {
   const rooms = useMappedState(state => state.rooms);
